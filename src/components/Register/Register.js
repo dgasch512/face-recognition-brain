@@ -43,6 +43,7 @@ class Register extends Component {
   };
   
   render() {
+    const { onRouteChange } = this.props;
     return (
       <article className='br2 ba b--black-10 mv4 w-100 w-50-m w-25-1 shadow-5 mw6 center'>
         <main className="pa4 black-80">
@@ -110,7 +111,7 @@ class Register extends Component {
               />
             </div>
             <div className="lh-copy mt3">
-              <p onClick={() => this.onRouteChange('signin')} className="f6 link dim black db pointer">Sign In</p>
+              <p onClick={() => onRouteChange('signin')} className="f6 link dim black db pointer">Sign In</p>
             </div>
           </div>
         </main>
