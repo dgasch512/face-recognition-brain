@@ -74,12 +74,13 @@ class App extends Component {
   }
 
   displayFaceBox = (box) => {
-    this.setState({box: box})
+    this.setState({box: box});
   }
 
   onInputChange = (event) => {
-    this.setState({ input: event.target.value })
+    this.setState({input: event.target.value});
   }
+
 
   onButtonSubmit = () => {
     this.setState({imageUrl: this.state.input})
@@ -87,7 +88,7 @@ class App extends Component {
     .predict('c0c0ac362b03416da06ab3fa36fb58e3', this.state.input)
     .then(response => {
       if (response) {
-        fetch('https://mysterious-eyrie-02265.herokuapp.com/:3000/image', {
+        fetch('https://mysterious-eyrie-02265.herokuapp.com~/image', {
           method: 'put',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify({
