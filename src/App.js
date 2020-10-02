@@ -88,7 +88,7 @@ class App extends Component {
     .predict('c0c0ac362b03416da06ab3fa36fb58e3', this.state.input)
     .then(response => {
       if (response) {
-        fetch('https://mysterious-eyrie-02265.herokuapp.com~/image', {
+        fetch('https://mysterious-eyrie-02265.herokuapp.com/image', {
           method: 'put',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify({
@@ -105,6 +105,7 @@ class App extends Component {
     })
     .catch(err => console.log(err));
   }
+  
   onRouteChange = (route) => {
     if (route === 'signout') {
       this.setState(initialState)
