@@ -8,7 +8,7 @@ import ImageLinkForm from './components/imageLinkForm/ImageLinkForm';
 import Rank from './components/rank/Rank';
 import Particles from 'react-particles-js';
 import './App.css';
-import Clarifai from 'clarifai';
+const Clarifai = require('clarifai');
 
 
 const app = new Clarifai.App({
