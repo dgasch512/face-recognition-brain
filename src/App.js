@@ -85,7 +85,7 @@ class App extends Component {
   onButtonSubmit = () => {
     this.setState({imageUrl: this.state.input})
     app.models
-    .predict('c0c0ac362b03416da06ab3fa36fb58e3', this.state.input)
+    .predict('d02b4508df58432fbb84e800597b8959', this.state.input)
     .then(response => {
       if (response) {
         fetch('https://mysterious-eyrie-02265.herokuapp.com/image', {
@@ -129,7 +129,7 @@ class App extends Component {
               onInputChange={this.onInputChange} 
               onButtonSubmit={this.onButtonSubmit} 
             />
-            <FaceRecognition box={ box } imageUrl={ imageUrl } /> 
+            <FaceRecognition box={box} imageUrl={imageUrl} /> 
           </div>
         : (
           route === 'signin'
