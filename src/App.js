@@ -8,7 +8,7 @@ import ImageLinkForm from './components/imageLinkForm/ImageLinkForm';
 import Rank from './components/rank/Rank';
 import Particles from 'react-particles-js';
 import './App.css';
-const Clarifai = require('clarifai');
+import Clarifai from 'clarifai';
 
 
 const app = new Clarifai.App({
@@ -85,7 +85,7 @@ class App extends Component {
   onButtonSubmit = () => {
     this.setState({imageUrl: this.state.input})
     app.models
-    .predict('d02b4508df58432fbb84e800597b8959', this.state.input)
+    .predict('c0c0ac362b03416da06ab3fa36fb58e3', this.state.input)
     .then(response => {
       if (response) {
         fetch('https://mysterious-eyrie-02265.herokuapp.com/image', {
